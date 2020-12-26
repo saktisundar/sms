@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Sign In
+        </title>
+        <style>
+
+body
+{
+    background-image: url(https://saktisundar1.github.io/imges/03.jpeg);
+    background-size: 1400px;
+    height: 5010;
+    width: 5100;
+}
+#login
+{
+    color: ivory;
+    background-color: black;
+    border: 5px dotted;
+    width: 30%;
+    height: 30%;
+}
+
+        </style>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    </head>
+    <body>
+        <link href="signin.css" rel="stylesheet" type="text/css"> 
+        <script src="signin.js"></script> 
+        <br/><br/><br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/>
+        <center>
+            <form id="login" method="post"  action="">
+            <table>
+            <tr>
+                <th>Signin Form </th>
+                <td style="text-align: right;">
+                    <button><a href="https://cranky-dubinsky-4664a1.netlify.app/login/login.html"> Log In </a></button></div>
+
+                </td>
+                <td><br/><br/></td>
+            </tr>
+            <tr> 
+                <th>User Name:</th>
+                <td><input type="text" name="te" id="te1" placeholder="Ganesh (full name only)" required></td>
+            </tr>
+            <tr>
+                <th>Password:</th>
+                <td><input type="password" name="pas" id="pas1" required></td>
+            </tr>
+            <tr> 
+                <th>Phone Number:</th>
+                <td><input type="number" name="te" id="te1" required placeholder="9567452390"></td>
+            </tr>
+            <tr>
+                <th>Email:</th>
+                <td><input type="email" name="pas" id="pas1" required placeholder="kity@gmail.com"></td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="post"><button><a href="https://cranky-dubinsky-4664a1.netlify.app/good%20earth/good%20earth.html" height="60px" width="50px">Submit</a></button></div>
+                    <script>
+                        var posts = []
+                          axios.get('http://localhost:5000/connect')
+                          .then(function (response) {
+                            document.getElementById("post").innerHTML = response.data
+                          })
+                      </script>
+                </td>
+            </tr>
+            </table>
+        </form>
+    </body>
+</html>
